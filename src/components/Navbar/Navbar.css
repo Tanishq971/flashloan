@@ -1,0 +1,87 @@
+
+.navbar {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.navbar-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Center Section */
+.navbar-center {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.wallet-address {
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(240, 240, 240, 0.8);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  font-family: "Courier New", monospace;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.wallet-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wallet-btn.connect {
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  color: white;
+}
+
+.wallet-btn.disconnect {
+  background: #f3f4f6;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+.wallet-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
