@@ -1,4 +1,3 @@
-// filepath: src/lib/websocket.ts
 export type WsStatus = "Connecting" | "Connected" | "Disconnected";
 
 type StatusListener = (status: WsStatus) => void;
@@ -10,7 +9,6 @@ class WebSocketService {
   private statusListeners: Set<StatusListener> = new Set();
   private messageListeners: Set<MessageListener> = new Set();
   private messageQueue: string[] = [];
-  private requestId = 1;
 
   public connect() {
     if (this.socket && this.socket.readyState < 2) return;
@@ -39,7 +37,7 @@ class WebSocketService {
     this.socket.onclose = () => this.updateStatus("Disconnected");
     this.socket.onerror = () => this.updateStatus("Disconnected");
   }
-  // In src/lib/websocket.ts, update the send method:
+
   public send(payload: string) {
     if (this.socket?.readyState === WebSocket.OPEN) {
       this.socket.send(payload);

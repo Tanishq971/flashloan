@@ -12,3 +12,5 @@ export const SESSION_DURATION = 3600; // 1 hour
 export const getAuthDomain = () => ({
   name: "Your App Name",
 });
+
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
